@@ -5,59 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundo com GIF e Texto em Néon</title>
     <style>
-        body, html {
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
             font-family: 'Poppins', sans-serif; /* Substitua 'Poppins' pela fonte desejada */
-            background: #000; /* Cor de fundo geral */
+            background: #000 url('https://i.gifer.com/4Cb2.gif') center center fixed no-repeat;
+            background-size: cover;
             color: #fff; /* Cor do texto */
-        }
-
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); /* Sombras para criar efeito de néon */
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+            border-radius: 10px;
         }
 
         h1 {
             font-size: 3em; /* Tamanho da fonte */
-            margin-bottom: 0.3em;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); /* Sombras para criar efeito de néon */
+            margin-bottom: 0.5em;
+            color: #ffcc00; /* Cor do texto em néon */
         }
 
         p {
             font-size: 1.2em; /* Tamanho da fonte para o parágrafo */
             margin-top: 0;
-        }
-
-        .background-container::before {
-            content: "";
-            background: url('https://i.gifer.com/4Cb2.gif') center center fixed;
-            background-size: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            filter: blur(8px);
-            pointer-events: none; /* Isso impede que o plano de fundo receba eventos do mouse */
+            color: #b3b3b3; /* Cor do texto secundário */
         }
     </style>
 
@@ -65,12 +43,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
 </head>
 <body>
-    <div class="background-container">
-        <div class="content">
-            <!-- Seu conteúdo vai aqui -->
-            <h1>Seu Texto em Néon</h1>
-            <p>Sua descrição</p>
-        </div>
+    <div class="content">
+        <!-- Seu conteúdo vai aqui -->
+        <h1>Seu Texto em Néon</h1>
+        <p>Sua descrição</p>
     </div>
 
     <!-- Se precisar de JavaScript, pode incluir aqui -->
